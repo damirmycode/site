@@ -1,65 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дамир Раисов | PL/PLUS Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; color: #1A1A1A; background-color: #ffffff; line-height: 1.6; scroll-behavior: smooth; }
+    .section-divider { border-bottom: 1px solid #f2f2f2; padding-bottom: 3rem; margin-bottom: 3rem; }
+    .skill-tag { background: #f8f8f8; border: 1px solid #eeeeee; padding: 4px 12px; border-radius: 6px; display: inline-block; font-size: 0.8rem; font-weight: 500; margin-bottom: 0.5rem; margin-right: 0.5rem; }
 
-  <title>Damir Raisov</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    .reveal { opacity: 0; transform: translateY(10px); transition: all 0.5s ease-out; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    .highlight { color: #FF385C; }
 
-  <!-- Favicons -->
-  <link href="assets/img/fav.png" rel="icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+    #privacy-banner {
+      transform: translateY(100%);
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    #privacy-banner.show { transform: translateY(0); }
+  </style>
 </head>
+<body class="selection:bg-red-50">
 
-<body>
+<header class="py-4 px-6 border-b border-gray-100 sticky top-0 bg-white/95 backdrop-blur-md z-40">
+  <div class="max-w-4xl mx-auto flex justify-between items-center">
+    <div class="flex items-center"><span class="font-bold text-lg tracking-tight">Damir Raisov<span class="highlight">.</span></span></div>
+    <nav class="flex gap-6 text-[10px] font-bold uppercase tracking-widest text-gray-500">
+      <a href="#about" class="hover:text-black transition">Профиль</a>
+      <a href="#experience" class="hover:text-black transition">Опыт</a>
+      <a href="#skills" class="hover:text-black transition">Стек</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
+<main class="max-w-4xl mx-auto px-6 py-16">
+  <section id="about" class="section-divider reveal">
+    <span class="highlight font-bold text-xs uppercase tracking-widest mb-4 block">PL/PLUS Developer · ЦФТ-Банк Dev</span>
+    <h1 class="text-4xl md:text-5xl font-bold mb-6 tracking-tight leading-tight">Проектирование и разработка банковских решений на платформе ЦФТ.</h1>
+    <p class="text-xl text-gray-500 max-w-3xl">PL/PLUS Developer. Эксперт в области автоматизации банковской деятельности. Проектирую и развиваю высоконагруженные системы на базе ЦФТ-Банк.</p>
+  </section>
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center">
-    <div class="container" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Damir Raisov</h1>
-      <p>Contacts <span class="typed" data-typed-items="WhatsApp, Telegram, VK, E-mail, Phone"></span></p>
-      <div class="social-links">
-        <a href="mailto:raisov.damir@mail.ru" class="mail"><i class="bx bx-mail-send"></i></a>
-        <a href="tel:+79134601577" class="phone"><i class="bx bx-phone-call"></i></a>
-        <a href="https://vk.com/raisovdamir" class="vk"><i class="bx bxl-vk"></i></a>
-        <a href="https://t.me/damirdev_ru" class="telegram"><i class="bx bxl-telegram"></i></a>
-        <a href="https://wa.me/79134601577" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+  <section id="experience" class="section-divider reveal">
+    <h2 class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-10">Опыт работы</h2>
+    <div class="space-y-12">
+      <div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4">
+        <div class="text-sm font-semibold text-gray-400">2023 — Наст. время</div>
+        <div>
+          <h3 class="font-bold text-xl">Ведущий разработчик</h3>
+          <p class="text-sm text-gray-400 mb-2 underline decoration-gray-100 underline-offset-4 uppercase tracking-wide font-medium">Абсолют Банк</p>
+          <ul class="text-gray-600 space-y-2 text-base">
+            <li>• Разработка и доработка функционала на платформе ЦФТ.</li>
+            <li>• Проектирование архитектуры банковских модулей.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4">
+        <div class="text-sm font-semibold text-gray-400">2022 — 2023</div>
+        <div>
+          <h3 class="font-bold text-xl">Программист</h3>
+          <p class="text-sm text-gray-400 mb-2 underline decoration-gray-100 underline-offset-4 uppercase tracking-wide font-medium">Банк «Левобережный»</p>
+          <p class="text-gray-600 text-sm">Разработка банковских операций с нуля и поддержка АБС.</p>
+        </div>
       </div>
     </div>
-  </section><!-- End Hero -->
+  </section>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <section id="skills" class="section-divider reveal">
+    <h2 class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-8">Технический стек</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h4 class="font-bold text-xs mb-4 uppercase text-gray-400">Ядро и БД</h4>
+        <div class="flex flex-wrap">
+          <span class="skill-tag">PL/PLUS</span><span class="skill-tag">Oracle PL/SQL</span>
+          <span class="skill-tag">CFT Platform IDE</span><span class="skill-tag">АРМ Навигатор</span>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-bold text-xs mb-4 uppercase text-gray-400">Workflow</h4>
+        <div class="flex flex-wrap">
+          <span class="skill-tag">GitLab</span><span class="skill-tag">Jira</span>
+          <span class="skill-tag">Confluence</span><span class="skill-tag">Agile</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <section id="contacts" class="py-12 reveal">
+    <h2 class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-8">Контакты</h2>
+    <div class="flex flex-wrap gap-x-12 gap-y-8 items-start">
+      <div class="flex flex-col">
+        <span class="text-[10px] text-gray-400 uppercase font-bold mb-1 tracking-wider">Email</span>
+        <a href="mailto:d.raisov@yandex.ru" class="text-xl font-bold hover:text-[#FF385C] transition">d.raisov@yandex.ru</a>
+      </div>
+      <div class="flex flex-col">
+        <span class="text-[10px] text-gray-400 uppercase font-bold mb-1 tracking-wider">Телефон</span>
+        <a href="tel:+79134601577" class="text-xl font-bold hover:text-[#FF385C] transition">+7 (913) 460-15-77</a>
+      </div>
+      <div class="flex flex-col">
+        <span class="text-[10px] text-gray-400 uppercase font-bold mb-1 tracking-wider">Локация</span>
+        <span class="text-xl font-bold">Новосибирск / Удаленно</span>
+      </div>
+    </div>
+    <div class="mt-12">
+      <a href="https://novosibirsk.hh.ru/resume/0cb0b435ff098dd2ee0039ed1f387059383230" target="_blank" class="inline-block bg-[#1A1A1A] text-white px-8 py-4 rounded-xl font-bold hover:bg-black transition text-sm shadow-lg shadow-gray-200">
+        Открыть резюме на HeadHunter
+      </a>
+    </div>
+  </section>
+</main>
 
+<footer class="py-12 bg-gray-50 text-center">
+  <p class="text-[10px] text-gray-400 uppercase tracking-[0.3em]">© 2026 Damir Raisov</p>
+</footer>
+
+<div id="privacy-banner" class="fixed bottom-0 left-0 right-0 z-50 p-6 bg-white border-t border-gray-100 shadow-[0_-10px_40px_rgba(0,0,0,0.08)]">
+  <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="text-[11px] text-gray-500 leading-relaxed text-center md:text-left">
+      Этот сайт не собирает персональные данные. Контакты предоставлены владельцем для деловой связи. Используя сайт, вы принимаете эти условия автоматически.
+    </div>
+    <button onclick="closePrivacy()" class="bg-[#FF385C] text-white text-[10px] font-bold uppercase tracking-widest px-8 py-3 rounded-lg hover:opacity-90 transition whitespace-nowrap">
+      Понятно
+    </button>
+  </div>
+</div>
+
+<script>
+  // Анимация при скролле
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('active');
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Логика баннера
+  const banner = document.getElementById('privacy-banner');
+  function closePrivacy() {
+    banner.classList.remove('show');
+    localStorage.setItem('privacy_accepted_2026', 'true');
+  }
+  window.addEventListener('DOMContentLoaded', () => {
+    if (!localStorage.getItem('privacy_accepted_2026')) {
+      setTimeout(() => banner.classList.add('show'), 1000);
+    }
+  });
+</script>
 </body>
-
 </html>
